@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Event Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- socket io js provides necessary functions for client -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js" defer></script>
+<script src="auth.js" ></script>
+
+
+</head>
+<body>
+    <h1>Socket.IO Event Interface</h1>
+
+    <div>
+        <h1>Select a Room to join or a user too message</h1>
+        <label for="room-select">Choose a room:</label>
+        <select id="room-select">
+            <option value="Devops">DevOps</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Covid19">COVID-19</option>
+            <option value="Sports">Sports</option>
+        </select>
+        <button onclick="joinRoom()">Join Room</button>
+
+        <label for="user-select">Choose a user:</label>
+        <select id="user-select">
+        </select>
+        <button onclick="joinChat()">Join Chat</button>
+ 
+    
+      
+<!-- 
+        <h3>Select Service</h3>
+        <label for="feedback-category">Service: </label>
+        <select id="feedback-category">
+            <option value="account_access">Account Access</option>
+            <option value="it_services">IT Services</option>
+            <option value="registrations">Registrations</option>
+        </select><br /><br />
+        <label for="feedback-message">Write your feedback here: </label>
+        <textarea type="text" id="feedback-message" placeholder="Write your feedback here..." ></textarea> <br /> <br />
+        <button id="btn" onclick="sendFeedback()">Send Feedback</button> <br /> <br /> -->
+    </div>
+    <h2 id="chat-name"></h2>
+
+    <div id="event-window">
+        <div id="event-log"></div>
+    </div>
+    <div id="messages"></div>
+
+    <input type="text" id="message-input" placeholder="Enter a message...">
+    <button id="msg" onclick="sendMessage()">Send Message</button> <br /> <br />
+    <button id="logout">Logout</button>
+</body>
+<script>
+    document.getElementById("logout").addEventListener("click", function () {
+        localStorage.removeItem("token"); // Remove stored token
+        window.location.href = "login.html"; // Redirect to login page
+    });
+</script>
+</html>

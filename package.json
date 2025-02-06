@@ -1,0 +1,31 @@
+{
+  "name": "101420460_lab_test1_chat_app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^5.1.2",
+    "express": "^4.21.2",
+    "mocha": "^11.1.0",
+    "nodemon": "^3.1.9",
+    "socket.io": "^4.8.1",
+    "mongoose": "^6.2.0",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "jsonwebtoken": "^9.0.2",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+
+  }
+  
+}
